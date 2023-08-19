@@ -1,0 +1,36 @@
+
+Project Report: Bank Churn Predictor Model by Harshit Melani (True Technologies)
+
+Introduction:
+In this project, Harshit Melani  In this project i have developed a predictive model to determine whether a bank customer is likely to churn or not. The aim was to build a machine learning model that can assist banks in identifying potential churn cases and take proactive measures to retain customers. The project involved data preprocessing, model training, evaluation, and the creation of a Graphical User Interface (GUI) for real-time predictions.
+
+first of all we will go with 
+
+Data Preprocessing:
+
+Imported necessary libraries: Pandas, NumPy, Seaborn.
+Loaded the dataset 'Churn_Modelling.csv' using Pandas.
+Explored the initial structure of the dataset using the .head() and .info() methods.
+Checked for missing values using .isnull().sum() and dropped irrelevant columns ('RowNumber', 'CustomerId', 'Surname') using .drop().
+Data Transformation:
+
+Encoded categorical variables using one-hot encoding with Pandas' .get_dummies() function.
+Split the dataset into features (X) and the target variable (y).
+Data Balancing:
+
+Addressed class imbalance in the target variable ('Exited') using the Synthetic Minority Over-sampling Technique (SMOTE) from the imblearn library.
+Model Selection and Training:
+
+Split the balanced dataset into training and testing sets using train_test_split from sklearn.model_selection.
+Scaled the features using StandardScaler from sklearn.preprocessing.
+Evaluated multiple algorithms: Logistic Regression, Support Vector Machine, K-Nearest Neighbors, Decision Tree, and Random Forest.
+Chose Random Forest as the best model based on accuracy scores.
+Creating a GUI for Predictions:
+
+Utilized the tkinter library to build a Graphical User Interface.
+Loaded the pre-trained Random Forest model and the StandardScaler.
+Created input fields for each feature and a button for prediction.
+Implemented the prediction function that preprocesses input, scales it, and makes predictions.
+Displayed prediction results on the GUI.
+Results:
+The developed Random Forest model yielded the highest accuracy score among the tested algorithms for predicting bank churn. The GUI created for real-time predictions provides an interactive interface for users to input customer information and obtain churn predictions instantly.
